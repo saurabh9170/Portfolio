@@ -1,0 +1,183 @@
+/* Deep Cyberpunk Ambient Background */
+body {
+    background: radial-gradient(circle at 50% 20%, #0d1326 0%, #05070e 100%);
+    background-attachment: fixed;
+    color: #e2e8f0;
+    overflow-x: hidden;
+}
+
+/* Floating Animations for Glowing Orbs */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+    }
+    50% {
+        transform: translateY(-30px) scale(1.08);
+    }
+}
+
+@keyframes pulseSlow {
+    0%, 100% {
+        opacity: 0.15;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.35;
+        transform: scale(1.15);
+    }
+}
+
+.animate-float {
+    animation: float 12s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulseSlow 8s ease-in-out infinite;
+}
+.glow-bg {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Custom Cursor Dot */
+#cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #818cf8;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease-out;
+}
+
+/* Section Reveal Fade & Scale Animation */
+.reveal {
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(30px) scale(0.98);
+}
+
+.reveal.active {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1);
+}
+
+/* Navigation Link Highlight */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #818cf8;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #818cf8;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* Skill Tech Badges */
+.tech-badge {
+    background-color: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(51, 65, 85, 0.8);
+    color: #cbd5e1;
+    font-size: 0.825rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+    border-color: #6366f1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+}
+
+/* Skill Progress Bars */
+.skill-progress {
+    transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Interactive Project Cards */
+.project-card {
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(99, 102, 241, 0.1);
+}
+
+.tag {
+    background-color: #0f172a;
+    color: #a5b4fc;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.375rem;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+    position: absolute;
+    left: -31px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #6366f1;
+    border: 2px solid #020617;
+}
+
+/* Modal Popup Overlay */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.open {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 1rem;
+    max-width: 500px;
+    width: 100%;
+    padding: 1.5rem;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.open .modal-content {
+    transform: scale(1);
+}

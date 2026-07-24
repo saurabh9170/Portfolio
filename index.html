@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurabh Singh | Full Stack & Backend Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased relative overflow-x-hidden">
+<!-- Interactive Animated Particle & Mesh Canvas Background -->
+<canvas id="bg-canvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0"></canvas>
+
+<!-- Subtle Ambient Glowing Orbs -->
+<div class="fixed top-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[140px] pointer-events-none animate-pulse-slow"></div>
+<div class="fixed bottom-1/4 right-1/4 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[160px] pointer-events-none animate-float"></div>
+
+    <!-- Ambient Glowing Background Circles -->
+    <div class="glow-bg top-[-10%] left-[-10%] w-[500px] h-[500px] bg-indigo-600/20"></div>
+    <div class="glow-bg top-[40%] right-[-10%] w-[600px] h-[600px] bg-purple-600/15"></div>
+
+    <!-- Dynamic Custom Cursor Dot -->
+    <div id="cursor-dot"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#about" class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform">
+                SAURABH<span class="text-indigo-500">.DEV</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="nav-link active">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#resume" class="nav-link">Resume</a>
+                <a href="#certifications" class="nav-link">Certificates</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <a href="mailto:0101saurabh2003@gmail.com" class="hidden md:inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:shadow-lg hover:shadow-indigo-500/25">
+                <span>Hire Me</span> <i class="fa-solid fa-paper-plane text-xs"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-24 pb-12 relative" id="about">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7 reveal opacity-0">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span>
+                    Available for New Opportunities
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white leading-tight">
+                    Hi, I'm <br/>
+                    <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Saurabh Singh</span>
+                </h1>
+                <h2 class="text-2xl text-slate-300 mt-4 font-medium flex items-center gap-2">
+                    I am a <span id="typed-text" class="text-indigo-400 font-semibold border-b-2 border-indigo-400"></span>
+                </h2>
+                <p class="mt-6 text-slate-400 leading-relaxed text-base">
+                    MCA student specializing in Python and backend architecture. Proficient in Flask, REST API development, database design, and integrating machine learning into real-world applications.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#projects" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3.5 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-1">
+                        Explore Work <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </a>
+                    <a href="https://github.com/saurabh9170" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 px-6 py-3.5 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 hover:-translate-y-1">
+                        <i class="fa-brands fa-github text-lg"></i> GitHub Profile
+                    </a>
+                </div>
+                <div class="mt-10 flex items-center gap-6 text-slate-400 text-2xl">
+                    <a href="https://linkedin.com/in/saurabh-singh9170" target="_blank" class="hover:text-indigo-400 hover:scale-125 transition-all"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/saurabh9170" target="_blank" class="hover:text-indigo-400 hover:scale-125 transition-all"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:0101saurabh2003@gmail.com" class="hover:text-indigo-400 hover:scale-125 transition-all"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Avatar Card with Hover Effect -->
+            <div class="md:col-span-5 flex justify-center reveal opacity-0 delay-200">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl blur-xl opacity-50 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative w-72 h-80 sm:w-80 sm:h-96 bg-slate-900 border border-slate-800 rounded-3xl p-6 flex flex-col justify-between items-center text-center backdrop-blur-xl">
+                        <div class="w-28 h-28 bg-gradient-to-tr from-indigo-500 to-purple-600 rounded-full p-1 mt-4">
+                            <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-terminal text-4xl text-indigo-400"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Saurabh Singh</h3>
+                            <p class="text-xs text-indigo-400 font-medium mt-1">MCA Graduate (2024–2026)</p>
+                            <p class="text-xs text-slate-400 mt-2">IK Gujral Punjab Technical University </p>
+                        </div>
+                        <div class="w-full bg-slate-950/80 p-3 rounded-2xl border border-slate-800 flex justify-around text-center">
+                            <div>
+                                <span class="block text-lg font-bold text-indigo-400">8.57</span>
+                                <span class="text-[10px] text-slate-400 uppercase tracking-wider">MCA CGPA</span>
+                            </div>
+                            <div class="border-r border-slate-800"></div>
+                            <div>
+                                <span class="block text-lg font-bold text-purple-400">4+</span>
+                                <span class="text-[10px] text-slate-400 uppercase tracking-wider">Live Projects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cyberpunk Grid Technical Skills Section -->
+<section class="py-24 relative bg-slate-950 overflow-hidden" id="skills">
+    <!-- Ambient Background Glow -->
+    <div class="absolute top-1/2 right-1/3 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/10 blur-[140px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal opacity-0">
+            <span class="text-xs uppercase tracking-[0.2em] text-cyan-400 font-mono font-semibold flex items-center justify-center gap-2 mb-2">
+                <i class="fa-solid fa-code text-cyan-400"></i> Tech Stack
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-wider">
+                TECHNICAL <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-500 bg-clip-text text-transparent">SKILLS</span>
+            </h2>
+        </div>
+
+        <!-- Skills Grid Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            
+            <!-- Card 1: Frontend Matrix -->
+            <div class="bg-slate-900/60 backdrop-blur-xl border border-cyan-500/30 hover:border-cyan-400/60 rounded-3xl p-7 shadow-[0_0_20px_rgba(6,182,212,0.1)] transition-all duration-300 reveal opacity-0">
+                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                    Frontend Matrix
+                </h3>
+                <div class="flex flex-wrap gap-2.5">
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">HTML5</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">CSS3</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">JavaScript</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">React</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">Tailwind CSS</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">Bootstrap</span>
+                </div>
+            </div>
+
+            <!-- Card 2: Backend Engine -->
+            <div class="bg-slate-900/60 backdrop-blur-xl border border-cyan-500/30 hover:border-cyan-400/60 rounded-3xl p-7 shadow-[0_0_20px_rgba(6,182,212,0.1)] transition-all duration-300 reveal opacity-0 delay-100">
+                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                    Backend Engine
+                </h3>
+                <div class="flex flex-wrap gap-2.5">
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">PHP 8.2</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">Python</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">Flask</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">REST APIs</span>
+                </div>
+            </div>
+
+            <!-- Card 3: Database Core -->
+            <div class="bg-slate-900/60 backdrop-blur-xl border border-cyan-500/30 hover:border-cyan-400/60 rounded-3xl p-7 shadow-[0_0_20px_rgba(6,182,212,0.1)] transition-all duration-300 reveal opacity-0 delay-200">
+                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                    Database Core
+                </h3>
+                <div class="flex flex-wrap gap-2.5">
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">MySQL 8.0</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">MongoDB</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">SQL Queries</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Row 2: Developer Tools & Languages -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            
+            <!-- Card 4: Developer Tools -->
+            <div class="bg-slate-900/60 backdrop-blur-xl border border-cyan-500/30 hover:border-cyan-400/60 rounded-3xl p-7 shadow-[0_0_20px_rgba(6,182,212,0.1)] transition-all duration-300 reveal opacity-0">
+                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                    Developer Tools
+                </h3>
+                <div class="flex flex-wrap gap-2.5">
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">VS Code</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">GitHub</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">Git</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">Jupyter Notebook</span>
+                </div>
+            </div>
+
+            <!-- Card 5: Languages & ML -->
+            <div class="bg-slate-900/60 backdrop-blur-xl border border-cyan-500/30 hover:border-cyan-400/60 rounded-3xl p-7 shadow-[0_0_20px_rgba(6,182,212,0.1)] transition-all duration-300 reveal opacity-0 delay-100">
+                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                    Languages & ML
+                </h3>
+                <div class="flex flex-wrap gap-2.5">
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">Python</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">C++</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">JavaScript</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">Scikit-Learn</span>
+                    <span class="px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-950/60 border border-cyan-700/50 hover:border-cyan-400 transition cursor-default">NLP</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Banner: Continuous Upgrade Mode -->
+        <div class="bg-slate-900/80 backdrop-blur-xl border border-indigo-500/30 hover:border-indigo-400/60 rounded-3xl p-8 sm:p-10 text-center shadow-[0_0_30px_rgba(99,102,241,0.15)] reveal opacity-0">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-indigo-400 mb-4 tracking-wide">
+                Continuous Upgrade Mode
+            </h3>
+            <p class="text-slate-300 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
+                I continuously improve my development skills by working on real-world full stack projects, modern interfaces, secure authentication systems, dashboards, APIs, and futuristic digital experiences.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Interactive Projects Section -->
+<section class="py-24 relative" id="projects">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal opacity-0">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white">Featured <span class="text-indigo-400">Projects</span></h2>
+            <p class="text-slate-400 text-sm mt-3">Click on any project card to view full architecture and features.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Project 1: CouponKart -->
+            <div class="project-card bg-slate-900 border border-slate-800 rounded-2xl p-7 flex flex-col justify-between reveal opacity-0" onclick="openModal('modal-couponkart')">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">CouponKart</h3>
+                        <span class="text-xs text-indigo-400 font-semibold bg-indigo-950/80 border border-indigo-800/80 px-2.5 py-1 rounded-md">May 2026</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Full-stack marketplace enabling users to buy and sell cashback coupons earned on recharges/transactions from platforms like GPay and PhonePe .
+                    </p>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="tag">Python</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">REST APIs</span>
+                    </div>
+                    <div class="flex justify-between items-center text-xs font-semibold text-indigo-400">
+                        <span>Click for Details <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                        <a href="https://github.com/saurabh9170/CouponKart" target="_blank" onclick="event.stopPropagation();" class="text-slate-400 hover:text-white text-base">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Fake News Detection -->
+            <div class="project-card bg-slate-900 border border-slate-800 rounded-2xl p-7 flex flex-col justify-between reveal opacity-0 delay-100" onclick="openModal('modal-fakenews')">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-white">Fake News Detection</h3>
+                        <span class="text-xs text-indigo-400 font-semibold bg-indigo-950/80 border border-indigo-800/80 px-2.5 py-1 rounded-md">August 2025</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Machine learning web app classifying news articles as Real or Fake using NLP techniques with a 91.6% accuracy and 91.5% F1-score .
+                    </p>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="tag">Python</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Scikit-Learn</span>
+                    </div>
+                    <div class="flex justify-between items-center text-xs font-semibold text-indigo-400">
+                        <span>Click for Details <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                        <a href="https://github.com/saurabh9170/Fakenewsdetect" target="_blank" onclick="event.stopPropagation();" class="text-slate-400 hover:text-white text-base">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Grocery Management System (NEW) -->
+            <div class="project-card bg-slate-900 border border-slate-800 rounded-2xl p-7 flex flex-col justify-between reveal opacity-0 delay-200" onclick="openModal('modal-grocery')">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-white">Grocery System</h3>
+                        <span class="text-xs text-cyan-400 font-semibold bg-cyan-950/80 border border-cyan-800/80 px-2.5 py-1 rounded-md">March 2026</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Web application designed to streamline inventory tracking, product cataloging, order management, and user transactions for retail stores.
+                    </p>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="tag">PHP 8.2</span>
+                        <span class="tag">MySQL 8.0</span>
+                        <span class="tag">HTML5/CSS3</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="flex justify-between items-center text-xs font-semibold text-cyan-400">
+                        <span>Click for Details <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                        <a href="https://github.com/saurabh9170/grocery_system.git" target="_blank" onclick="event.stopPropagation();" class="text-slate-400 hover:text-white text-base">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Experience & Research Section -->
+    <section class="py-24 bg-slate-900/50 border-t border-b border-slate-800/80" id="experience">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Alternating Glowing Education Timeline Section -->
+<section class="py-24 relative bg-slate-950 overflow-hidden" id="education">
+    <!-- Background Ambient Glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/5 blur-[150px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-20 reveal opacity-0">
+            <span class="text-xs uppercase tracking-[0.2em] text-cyan-400 font-mono font-semibold flex items-center justify-center gap-2 mb-2">
+                <i class="fa-solid fa-graduation-cap text-cyan-400"></i> Academic Journey
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-wider">
+                ACADEMIC <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-500 bg-clip-text text-transparent">QUALIFICATIONS</span>
+            </h2>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="relative">
+            <!-- Central Vertical Glowing Line -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-cyan-500 via-indigo-500 to-slate-800"></div>
+
+            <div class="space-y-12">
+                
+                <!-- Item 1: MCA (Left Card) -->
+                <div class="relative flex items-center justify-between md:flex-row flex-col reveal opacity-0">
+                    <div class="w-full md:w-5/12 pr-0 md:pr-8 mb-8 md:mb-0">
+                        <div class="bg-slate-900/80 backdrop-blur-xl border border-cyan-500/40 hover:border-cyan-400 rounded-3xl p-6 shadow-[0_0_25px_rgba(6,182,212,0.15)] transition-all duration-300">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 rounded-2xl bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">MCA – Master of Computer Applications</h3>
+                                    <span class="inline-block mt-1 text-[11px] text-cyan-400 font-mono font-semibold bg-cyan-950/80 border border-cyan-800/80 px-3 py-0.5 rounded-full">2024 - 2026</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-400 font-mono mb-4">Post Graduate</p>
+                            
+                            <!-- Progress Bar & Score -->
+                            <div class="mt-4 pt-3 border-t border-slate-800/80">
+                                <div class="flex justify-between items-center text-xs font-mono mb-1.5">
+                                    <span class="text-slate-400">CGPA</span>
+                                    <span class="text-cyan-400 font-bold">8.57 / 10</span>
+                                </div>
+                                <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800">
+                                    <div class="bg-gradient-to-r from-cyan-500 to-indigo-500 h-2 rounded-full" style="width: 85.7%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center text-[10px] text-slate-500 font-mono tracking-wider uppercase mt-5">
+                                <span>Academic Record</span>
+                                <span class="text-cyan-400/80">Verified Node</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Glowing Timeline Node -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-slate-950 border-2 border-cyan-400 shadow-[0_0_12px_#06b6d4] z-10 hidden md:block"></div>
+
+                    <div class="w-full md:w-5/12 pl-0 md:pl-8"></div>
+                </div>
+
+                <!-- Item 2: Graduation / BSc (Right Card) -->
+                <div class="relative flex items-center justify-between md:flex-row flex-col reveal opacity-0">
+                    <div class="w-full md:w-5/12 pr-0 md:pr-8"></div>
+
+                    <!-- Glowing Timeline Node -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-slate-950 border-2 border-cyan-400 shadow-[0_0_12px_#06b6d4] z-10 hidden md:block"></div>
+
+                    <div class="w-full md:w-5/12 pl-0 md:pl-8 mb-8 md:mb-0">
+                        <div class="bg-slate-900/80 backdrop-blur-xl border border-cyan-500/40 hover:border-cyan-400 rounded-3xl p-6 shadow-[0_0_25px_rgba(6,182,212,0.15)] transition-all duration-300">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 rounded-2xl bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">BCA - Bachelor of Computer Applications</h3>
+                                    <span class="inline-block mt-1 text-[11px] text-cyan-400 font-mono font-semibold bg-cyan-950/80 border border-cyan-800/80 px-3 py-0.5 rounded-full">2021 - 2024</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-400 font-mono mb-4">Graduation</p>
+                            
+                            <!-- Progress Bar & Score -->
+                            <div class="mt-4 pt-3 border-t border-slate-800/80">
+                                <div class="flex justify-between items-center text-xs font-mono mb-1.5">
+                                    <span class="text-slate-400">CGPA</span>
+                                    <span class="text-cyan-400 font-bold">7.98 / 10</span>
+                                </div>
+                                <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800">
+                                    <div class="bg-gradient-to-r from-cyan-500 to-indigo-500 h-2 rounded-full" style="width: 79.8%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center text-[10px] text-slate-500 font-mono tracking-wider uppercase mt-5">
+                                <span>Academic Record</span>
+                                <span class="text-cyan-400/80">Verified Node</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: 12th Grade (Left Card) -->
+                <div class="relative flex items-center justify-between md:flex-row flex-col reveal opacity-0">
+                    <div class="w-full md:w-5/12 pr-0 md:pr-8 mb-8 md:mb-0">
+                        <div class="bg-slate-900/80 backdrop-blur-xl border border-cyan-500/40 hover:border-cyan-400 rounded-3xl p-6 shadow-[0_0_25px_rgba(6,182,212,0.15)] transition-all duration-300">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 rounded-2xl bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg">
+                                    <i class="fa-solid fa-school"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">12th PCM : UP Board</h3>
+                                    <span class="inline-block mt-1 text-[11px] text-cyan-400 font-mono font-semibold bg-cyan-950/80 border border-cyan-800/80 px-3 py-0.5 rounded-full">2020 - 2021</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-400 font-mono mb-4">Swami Vivekanand Inter College,Allahganj</p>
+                            
+                            <!-- Progress Bar & Score -->
+                            <div class="mt-4 pt-3 border-t border-slate-800/80">
+                                <div class="flex justify-between items-center text-xs font-mono mb-1.5">
+                                    <span class="text-slate-400">PERCENTAGE</span>
+                                    <span class="text-cyan-400 font-bold">76%</span>
+                                </div>
+                                <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800">
+                                    <div class="bg-gradient-to-r from-cyan-500 to-indigo-500 h-2 rounded-full" style="width: 76%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center text-[10px] text-slate-500 font-mono tracking-wider uppercase mt-5">
+                                <span>Academic Record</span>
+                                <span class="text-cyan-400/80">Verified Node</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Glowing Timeline Node -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-slate-950 border-2 border-cyan-400 shadow-[0_0_12px_#06b6d4] z-10 hidden md:block"></div>
+
+                    <div class="w-full md:w-5/12 pl-0 md:pl-8"></div>
+                </div>
+
+                <!-- Item 4: 10th Grade (Right Card) -->
+                <div class="relative flex items-center justify-between md:flex-row flex-col reveal opacity-0">
+                    <div class="w-full md:w-5/12 pr-0 md:pr-8"></div>
+
+                    <!-- Glowing Timeline Node -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-slate-950 border-2 border-cyan-400 shadow-[0_0_12px_#06b6d4] z-10 hidden md:block"></div>
+
+                    <div class="w-full md:w-5/12 pl-0 md:pl-8">
+                        <div class="bg-slate-900/80 backdrop-blur-xl border border-cyan-500/40 hover:border-cyan-400 rounded-3xl p-6 shadow-[0_0_25px_rgba(6,182,212,0.15)] transition-all duration-300">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 rounded-2xl bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg">
+                                    <i class="fa-solid fa-school"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Secondary School (10th), UP Board</h3>
+                                    <span class="inline-block mt-1 text-[11px] text-cyan-400 font-mono font-semibold bg-cyan-950/80 border border-cyan-800/80 px-3 py-0.5 rounded-full">2018 - 2019</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-400 font-mono mb-4">Swami Vivekanand Inter College,Allahganj</p>
+                            
+                            <!-- Progress Bar & Score -->
+                            <div class="mt-4 pt-3 border-t border-slate-800/80">
+                                <div class="flex justify-between items-center text-xs font-mono mb-1.5">
+                                    <span class="text-slate-400">PERCENTAGE</span>
+                                    <span class="text-cyan-400 font-bold">76%</span>
+                                </div>
+                                <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800">
+                                    <div class="bg-gradient-to-r from-cyan-500 to-indigo-500 h-2 rounded-full" style="width: 76%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center text-[10px] text-slate-500 font-mono tracking-wider uppercase mt-5">
+                                <span>Academic Record</span>
+                                <span class="text-cyan-400/80">Verified Node</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+            <!-- Experience & Research -->
+            <div class="reveal opacity-0 delay-200">
+                <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                    <i class="fa-solid fa-briefcase text-purple-400"></i> Experience & Research
+                </h2>
+                <div class="space-y-6">
+                    <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800/80">
+                        <span class="text-[10px] uppercase font-extrabold tracking-wider bg-indigo-500/10 text-indigo-400 px-2 py-1 rounded">Internship</span>
+                        <h3 class="text-lg font-bold text-white mt-2">Full Stack Development Intern</h3>
+                        <p class="text-xs text-slate-400 mb-2">Code Tech IT Solution</p>
+                        <p class="text-xs text-slate-300 leading-relaxed">Gained hands-on experience designing and building responsive web interfaces with Python ,Flask, HTML, CSS, and JS .</p>
+                    </div>
+                    <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800/80">
+                        <span class="text-[10px] uppercase font-extrabold tracking-wider bg-purple-500/10 text-purple-400 px-2 py-1 rounded">Publication</span>
+                        <h3 class="text-lg font-bold text-white mt-2">IEEE Format Research Paper</h3>
+                        <p class="text-xs text-slate-300 italic mt-1">"TF-IDF and Logistic Regression for Real-Time Fake News Detection..." </p>
+                        <p class="text-xs text-slate-400 mt-2">Co-authoring research on NLP classifier systems with faculty at CGC University, Mohali .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Certifications Section -->
+<section class="py-20 relative bg-slate-900/50 border-t border-b border-slate-800/80" id="certifications">
+    <!-- Ambient Glow -->
+    <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-[400px] h-[400px] bg-purple-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal opacity-0">
+            <span class="text-xs uppercase tracking-[0.2em] text-cyan-400 font-mono font-semibold flex items-center justify-center gap-2 mb-2">
+                <i class="fa-solid fa-certificate text-cyan-400"></i> Qualifications
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white">
+                VERIFIED <span class="bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent">CERTIFICATIONS</span>
+            </h2>
+            <p class="text-slate-400 text-sm mt-3">Professional training courses and skill accreditations .</p>
+        </div>
+
+        <!-- Certifications Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Certification 1: Board Infinity -->
+            <div class="bg-slate-950/80 border border-slate-800/80 hover:border-cyan-500/50 rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] flex flex-col justify-between reveal opacity-0">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <span class="text-xs text-cyan-400 font-mono font-semibold bg-cyan-950/80 border border-cyan-800/80 px-2.5 py-1 rounded-md">Nov 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">Data Science for Beginners</h3>
+                    <p class="text-xs font-mono text-cyan-400 mb-4">Board Infinity </p>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Gained foundational understanding of data handling, datasets, statistical analysis, and data-driven decision-making .
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+                    <span class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-shield-halved text-emerald-400"></i> Verified Credential 
+                    </span>
+                    <span class="bg-slate-900 border border-slate-800 px-2.5 py-1 rounded text-slate-300">Data Science</span>
+                </div>
+            </div>
+
+            <!-- Certification 2: Udemy -->
+            <div class="bg-slate-950/80 border border-slate-800/80 hover:border-indigo-500/50 rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] flex flex-col justify-between reveal opacity-0 delay-100">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-950/80 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xl">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <span class="text-xs text-indigo-400 font-mono font-semibold bg-indigo-950/80 border border-indigo-800/80 px-2.5 py-1 rounded-md">Jul 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">Full Stack Web Development</h3>
+                    <p class="text-xs font-mono text-indigo-400 mb-4">Udemy </p>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Covered HTML5, CSS3, JavaScript (ES6+), Bootstrap, and React.js for modern responsive front-end development .
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+                    <span class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-shield-halved text-emerald-400"></i> Verified Credential 
+                    </span>
+                    <span class="bg-slate-900 border border-slate-800 px-2.5 py-1 rounded text-slate-300">Web Dev</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Futuristic Resume Access Section -->
+<section class="py-20 relative bg-slate-950 overflow-hidden" id="resume">
+    <!-- Ambient Glow Background -->
+    <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-12 reveal opacity-0">
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-wider">
+                RESUME <span class="bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent">ACCESS</span>
+            </h2>
+        </div>
+
+        <!-- Main Card Container -->
+        <div class="bg-slate-900/60 backdrop-blur-xl border border-cyan-500/30 rounded-3xl p-6 sm:p-10 shadow-[0_0_50px_rgba(6,182,212,0.1)] reveal opacity-0">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Column: Details & Action Buttons -->
+                <div class="lg:col-span-5 flex flex-col justify-center">
+                    <span class="text-xs uppercase tracking-[0.2em] text-cyan-400 font-mono font-semibold flex items-center gap-2 mb-3">
+                        <i class="fa-regular fa-file-pdf text-cyan-400"></i> Professional Profile
+                    </span>
+                    
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                        View My <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent">Resume</span>
+                    </h3>
+                    
+                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+                        You can preview my resume directly from this section or download it to explore my education, skills, training, and project background .
+                    </p>
+
+                    <!-- Buttons Container with your Drive Link -->
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="https://drive.google.com/file/d/1H_V7l3gqb_CewOF0ksApQ6dIxGPv0Spx/view?usp=drivesdk" target="_blank" class="px-6 py-3.5 rounded-2xl bg-indigo-950/80 border border-indigo-500/50 hover:border-cyan-400 text-white font-semibold text-sm transition-all duration-300 flex items-center gap-2.5 shadow-[0_0_15px_rgba(99,102,241,0.2)] hover:shadow-[0_0_25px_rgba(6,182,212,0.4)] hover:-translate-y-0.5">
+                            <i class="fa-regular fa-eye text-cyan-400"></i> View Resume
+                        </a>
+
+                        <a href="https://drive.google.com/uc?export=download&id=1H_V7l3gqb_CewOF0ksApQ6dIxGPv0Spx" class="px-6 py-3.5 rounded-2xl bg-cyan-950/80 border border-cyan-500/50 hover:border-cyan-400 text-white font-semibold text-sm transition-all duration-300 flex items-center gap-2.5 shadow-[0_0_15px_rgba(6,182,212,0.2)] hover:shadow-[0_0_25px_rgba(6,182,212,0.4)] hover:-translate-y-0.5">
+                            <i class="fa-solid fa-download text-cyan-400"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Live Embedded Drive Preview -->
+                <div class="lg:col-span-7">
+                    <div class="relative group rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 shadow-2xl">
+                        
+                        <!-- Top Toolbar Emulation -->
+                        <div class="bg-slate-900 border-b border-slate-800 px-4 py-2.5 flex justify-between items-center text-xs text-slate-400 font-mono">
+                            <div class="flex items-center gap-2">
+                                <span class="bg-slate-800 text-slate-200 px-2 py-0.5 rounded text-[11px]">Drive Preview</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <a href="https://drive.google.com/file/d/1H_V7l3gqb_CewOF0ksApQ6dIxGPv0Spx/view?usp=drivesdk" target="_blank" title="Open Fullscreen" class="hover:text-cyan-400 transition">
+                                    <i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Drive Iframe -->
+                        <div class="w-full h-[480px] bg-slate-900">
+                            <iframe 
+                                src="https://drive.google.com/file/d/1H_V7l3gqb_CewOF0ksApQ6dIxGPv0Spx/preview" 
+                                class="w-full h-full border-none" 
+                                title="Saurabh Singh Resume Preview">
+                            </iframe>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+    <!-- Footer Contact -->
+    <!-- Futuristic Contact Node / Communication Portal -->
+<footer class="py-20 relative bg-slate-950 overflow-hidden" id="contact">
+    <!-- Neon Glow Background Effects -->
+    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <!-- Top Section Header -->
+        <div class="text-center mb-12 reveal opacity-0">
+            <span class="text-xs uppercase tracking-[0.3em] text-cyan-400 font-semibold flex items-center justify-center gap-2">
+                <i class="fa-solid fa-robot text-cyan-400"></i> Communication Portal
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2">
+                CONTACT <span class="bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent">NODE</span>
+            </h2>
+        </div>
+
+        <!-- Main Portal Container -->
+        <div class="bg-slate-900/60 backdrop-blur-xl border border-cyan-500/30 rounded-3xl p-6 sm:p-10 shadow-[0_0_50px_rgba(6,182,212,0.1)] reveal opacity-0">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Left Column: Communication Info -->
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider mb-4">
+                            <i class="fa-solid fa-headset"></i> Communication Portal
+                        </div>
+                        <h3 class="text-3xl font-extrabold text-white leading-snug">
+                            Let’s Build Something <br/>
+                            <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent">Futuristic</span>
+                        </h3>
+                        <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                            I'm open to software development, backend engineering, and full-stack opportunities . Send a direct message through this interface to connect.
+                        </p>
+                    </div>
+
+                    <!-- Contact Channels List -->
+                    <div class="space-y-3 mt-8">
+                        <!-- Email Card -->
+                        <div class="flex items-center justify-between p-3.5 bg-slate-950/80 border border-cyan-500/20 hover:border-cyan-400/50 rounded-2xl transition duration-300 group">
+                            <div class="flex items-center gap-3.5 overflow-hidden">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-105 transition-transform shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="truncate">
+                                    <span class="text-[10px] text-slate-400 uppercase tracking-wider block font-mono">Email Channel</span>
+                                    <a href="mailto:0101saurabh2003@gmail.com" class="text-xs font-medium text-slate-200 hover:text-cyan-400 transition truncate block">0101saurabh2003@gmail.com</a>
+                                </div>
+                            </div>
+                            <button onclick="copyToClipboard('0101saurabh2003@gmail.com', this)" class="p-2 text-slate-400 hover:text-cyan-400 transition ml-2 shrink-0" title="Copy Email">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <!-- Phone Card -->
+                        <div class="flex items-center justify-between p-3.5 bg-slate-950/80 border border-cyan-500/20 hover:border-cyan-400/50 rounded-2xl transition duration-300 group">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-105 transition-transform shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] text-slate-400 uppercase tracking-wider block font-mono">Phone Link</span>
+                                    <a href="tel:+919170947257" class="text-xs font-medium text-slate-200 hover:text-cyan-400 transition block">+91-9170947257</a>
+                                </div>
+                            </div>
+                            <button onclick="copyToClipboard('+919170947257', this)" class="p-2 text-slate-400 hover:text-cyan-400 transition ml-2 shrink-0" title="Copy Phone">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <!-- GitHub Card -->
+                        <div class="flex items-center justify-between p-3.5 bg-slate-950/80 border border-cyan-500/20 hover:border-cyan-400/50 rounded-2xl transition duration-300 group">
+                            <div class="flex items-center gap-3.5 overflow-hidden">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-105 transition-transform shrink-0">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <div class="truncate">
+                                    <span class="text-[10px] text-slate-400 uppercase tracking-wider block font-mono">GitHub</span>
+                                    <a href="https://github.com/saurabh9170" target="_blank" class="text-xs font-medium text-slate-200 hover:text-cyan-400 transition block truncate">github.com/saurabh9170</a>
+                                </div>
+                            </div>
+                            <a href="https://github.com/saurabh9170" target="_blank" class="p-2 text-slate-400 hover:text-cyan-400 transition ml-2 shrink-0">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+
+                        <!-- LinkedIn Card -->
+                        <div class="flex items-center justify-between p-3.5 bg-slate-950/80 border border-cyan-500/20 hover:border-cyan-400/50 rounded-2xl transition duration-300 group">
+                            <div class="flex items-center gap-3.5 overflow-hidden">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-105 transition-transform shrink-0">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </div>
+                                <div class="truncate">
+                                    <span class="text-[10px] text-slate-400 uppercase tracking-wider block font-mono">LinkedIn</span>
+                                    <a href="https://linkedin.com/in/saurabh-singh9170" target="_blank" class="text-xs font-medium text-slate-200 hover:text-cyan-400 transition block truncate">linkedin.com/in/saurabh-singh9170</a>
+                                </div>
+                            </div>
+                            <a href="https://linkedin.com/in/saurabh-singh9170" target="_blank" class="p-2 text-slate-400 hover:text-cyan-400 transition ml-2 shrink-0">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Direct Signal Message Form -->
+                <div class="lg:col-span-7 bg-slate-950/90 border border-cyan-500/30 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-inner">
+                    <div>
+                        <span class="text-[10px] uppercase font-mono tracking-widest text-cyan-400 font-semibold block mb-1">
+                            MESSAGE TRANSMISSION
+                        </span>
+                        <h4 class="text-2xl font-bold text-white mb-6">Send Direct Signal</h4>
+
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <input type="text" required placeholder="Enter your name" class="w-full bg-slate-900/90 border border-slate-800 focus:border-cyan-400/80 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none transition shadow-inner">
+                            </div>
+                            <div>
+                                <input type="email" required placeholder="Enter your email" class="w-full bg-slate-900/90 border border-slate-800 focus:border-cyan-400/80 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none transition shadow-inner">
+                            </div>
+                            <div>
+                                <input type="text" required placeholder="Enter subject" class="w-full bg-slate-900/90 border border-slate-800 focus:border-cyan-400/80 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none transition shadow-inner">
+                            </div>
+                            <div>
+                                <textarea rows="4" required placeholder="Transmit your message" class="w-full bg-slate-900/90 border border-slate-800 focus:border-cyan-400/80 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none transition shadow-inner resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-cyan-600 via-indigo-600 to-purple-600 hover:from-cyan-500 hover:to-purple-500 text-white font-semibold text-sm transition-all duration-300 shadow-[0_0_20px_rgba(6,182,212,0.25)] hover:shadow-[0_0_30px_rgba(6,182,212,0.4)] flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane text-xs"></i> Send Transmission
+                            </button>
+                        </form>
+                    </div>
+
+                    <p class="text-[11px] text-slate-500 text-center font-mono mt-6">
+                        Anti-spam cooldown is enabled. Please avoid repeated submissions.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="mt-12 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+            <p>&copy; 2026 Saurabh Singh. AI Portfolio Interface.</p>
+            <div class="flex gap-6 font-mono text-[11px]">
+                <a href="#about" class="hover:text-cyan-400 transition">HOME</a>
+                <a href="#skills" class="hover:text-cyan-400 transition">SKILLS</a>
+                <a href="#projects" class="hover:text-cyan-400 transition">PROJECTS</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- React-like Modals for Project Details -->
+    <div id="modal-couponkart" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-white">CouponKart Architecture</h3>
+                <button onclick="closeModal('modal-couponkart')" class="text-slate-400 hover:text-white text-xl">&times;</button>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                CouponKart handles high-throughput cashback coupon exchange using Flask endpoints and MySQL database tables .
+            </p>
+            <ul class="list-disc list-inside text-xs text-slate-400 space-y-2 mb-6">
+                <li>Implemented REST APIs and secure CRUD operations for user coupon management .</li>
+                <li>Designed responsive frontend layouts integrated directly with backend endpoints .</li>
+                <li>Utilized Git version control across multi-feature development .</li>
+            </ul>
+            <a href="https://github.com/saurabh9170/CouponKart" target="_blank" class="block text-center bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold py-2.5 rounded-lg transition">View on GitHub</a>
+        </div>
+    </div>
+
+    <div id="modal-fakenews" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-white">Fake News Detector Specs</h3>
+                <button onclick="closeModal('modal-fakenews')" class="text-slate-400 hover:text-white text-xl">&times;</button>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                A trained Machine Learning pipeline for real-time natural language classification .
+            </p>
+            <ul class="list-disc list-inside text-xs text-slate-400 space-y-2 mb-6">
+                <li>TF-IDF vectorizer + Logistic Regression classifier achieving 91.6% accuracy .</li>
+                <li>Bcrypt-secured authentication and MySQL prediction history logging .</li>
+                <li>Full data preprocessing: tokenization, stop-word removal, stemming .</li>
+            </ul>
+            <a href="https://github.com/saurabh9170/Fakenewsdetect" target="_blank" class="block text-center bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold py-2.5 rounded-lg transition">View on GitHub</a>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
